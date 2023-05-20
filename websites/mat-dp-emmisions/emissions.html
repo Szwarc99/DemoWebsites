@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,15 +13,7 @@
     <div class="navbar-brand">
         <a class="navbar-item">
             <img src="Refficiency_logos-09.png" height="28" width="70"/>
-        </a>
-    <!--
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-    -->
-    <!--<div class="navbar-menu" id="navMenu">-->
+        </a>    
         <div class="navbar-start">
             <div class="navbar-item">
                 <button class="button is-black is-inverted is-large pl-3 pr-3" style ="color: #FFBA67">
@@ -58,11 +50,9 @@
       <div class="navbar-menu">
         <div class="navbar-end">
             <div class="navbar-item">
-
                     <a>
                         <i class="fab fa-twitter" style ="color: #FFBA67"></i>
                     </a>
-
             </div>
             <div class="navbar-item">
                 <a>
@@ -84,30 +74,14 @@
 </nav>
 <hr class="rounded" style ="background-color: #96D4CC;height: 10px;margin-top: 0">
 <div class="container ml-0" style="max-width:100%">
-
     <div class="columns">
-
         <div class="column mx-3" style ="background-color: #DEE2D9">
-
             <br>
             <div class ="box">
                 MAT-dp (Material Demand Projections) is a model developed by the
                 University of Cambridge. MAT-dp compares the material implications of
                 changing energy and transport systems over time.
             </div>
-
-<!--            <div class="box">-->
-<!--                <p>Welcome to MAT-dp, an-->
-<!--                interactive tool for exploring-->
-<!--                climate compatible futures-->
-<!--                for energy and transport-->
-<!--                systems in developing-->
-<!--                countries and their impact-->
-<!--                on material demand and-->
-<!--                industrial capacity-->
-<!--                </p>-->
-<!--            </div>-->
-
             <div class="field">
                 <div class="level m-0">
                     <label class="label">Country</label>
@@ -122,8 +96,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="field">
                 <div class="level m-0">
                     <label class="label">Scenario</label>
@@ -139,7 +111,6 @@
                     </div>
                 </div>
             </div>
-
             <div class ="container has-text-centered">
                 <a id = "conditons">
                     <u>Conditions of use</u>
@@ -147,25 +118,16 @@
             </div>
             <br>
             <div class ="container has-text-centered">
-
                 <img src="Refficiency-04.png" height="128" width="128"/>
 
-
                 <img src="cambridge_logo.png" height="128" width="128"/>
-
             </div>
-
-
         </div>
-
-
         <div class="column is-four-fifths">
             <div class=container>
                 <canvas id="testChart">
                 </canvas>
             </div>
-
-
             <div class=container>
                 <canvas id="barChart1">
                 </canvas>
@@ -187,7 +149,6 @@
         </div>
     </div>
 </div>
-
 <div class ="modal" id="scenariomodal">
     <div class="modal-background" id="sbg"></div>
     <div class = "modal-content has-background-white">
@@ -196,7 +157,6 @@
         </div>
     </div>
 </div>
-
 <div class = "modal" id ="conmodal">
     <div class="modal-background" id="conbg"></div>
     <div class = "modal-content has-background-white">
@@ -289,7 +249,6 @@ the license permits.<br><br>
             "Wind (Offshore)": "SkyBlue"
 
         }
-
     }
 
     function refreshCountry() {
@@ -369,9 +328,6 @@ the license permits.<br><br>
         var bar1 = document.getElementById('barChart1').getContext('2d');
         var bar1Labels = Object.keys(Object.values(emissions_tech[c][s])[0]);
 
-        console.log(bar1Labels);
-
-
         barChart1 = new Chart(bar1, {
             type: 'horizontalBar',
             data: {
@@ -420,11 +376,7 @@ the license permits.<br><br>
         })
 
         var bar2 = document.getElementById('barChart2');
-        var bar2Labels = Object.keys(emissions_mat[c][s]);
-
-        console.log(bar2Labels);
-
-        console.log(Object.values(emissions_mat[c][s]));
+        var bar2Labels = Object.keys(emissions_mat[c][s]);        
 
         barChart2 = new Chart(bar2, {
             type: 'horizontalBar',
@@ -473,8 +425,7 @@ the license permits.<br><br>
     var cmodal = document.getElementById('countrymodal');
     var cbg = document.getElementById('cbg');
 
-    cicon.addEventListener('click',()=>{
-        console.log('clicked');
+    cicon.addEventListener('click',()=>{        
         cmodal.classList.add('is-active')
     })
     cbg.addEventListener('click',()=>{
@@ -485,8 +436,7 @@ the license permits.<br><br>
     var smodal = document.getElementById('scenariomodal');
     var sbg = document.getElementById('sbg');
 
-    sicon.addEventListener('click',()=>{
-        console.log('clicked');
+    sicon.addEventListener('click',()=>{        
         smodal.classList.add('is-active')
     })
     sbg.addEventListener('click',()=>{
@@ -537,7 +487,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 </script>
-
 
 </body>
 </html>
